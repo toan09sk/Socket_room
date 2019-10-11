@@ -14,7 +14,7 @@ io.on("connection", (socket) => {
     console.log(socket.adapter.rooms);
 
     socket.on("tao-room", (data) => {
-        console.log(data);
+        socket.join(data);
     });
 });
 
